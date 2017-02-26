@@ -65,6 +65,8 @@ app.get('/:articlename',function(req,res){
   var articlename=req.params.articlename;
   res.send(createtemplate(articles[articlename]));
 });
+
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
