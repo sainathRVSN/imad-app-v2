@@ -4,34 +4,59 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var articles={
- 'article-one':{
-    title:'first article sainath',
-    heading:'article one',
-    date:'26 mar 2017',
-    content:`<p>create a project create a project create a project create a project create a projectcreate a projectcreate a projectcreate a projectcreate a projectcreate a project create a projectcreate a project create a project create a project</p>`
+
+var articles = {
+'article-one': {
+title: 'Article one | Krishna',
+heading:'Article one',
+date: 'February-10-2017',
+content: 
+`<p>
+This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+</p>
+<p>
+This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+</p>
+<p>
+This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+</p>
+<p>
+This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.This is the content for my first article.
+</p>
+`
 },
- 'article-two':{
-    title:'second article sainath',
-    heading:'article two',
-    date:'26 mar 2017',
-    content:`<p>create a project create a project create a project create a project create a projectcreate a projectcreate a projectcreate a projectcreate a projectcreate a project create a projectcreate a project create a project create a project</p>`
+'article-two': {
+title: 'Article two | Krishna',
+heading:'Article Two',
+date: 'February-15-2017',
+content:
+`
+<p>
+This is the content for my second article
+</p>
+`
 },
- 'article-three':{
-    title:'third article sainath',
-    heading:'article three',
-    date:'26 mar 2017',
-    content:`<p>create a project create a project create a project create a project create a projectcreate a projectcreate a projectcreate a projectcreate a projectcreate a project create a projectcreate a project create a project create a project</p>`
+'article-three': {
+title: 'Article Three | Krishna',
+heading:'Article Three',
+date: 'February-25-2017',
+content:
+`
+<p>
+This is the content for my Third article
+</p>
+`
 }
 };
-
 function createTemplate (data){
 var date = data.date;
 var content = data.content;
 var heading = data.heading;
 var title = data.title;
 
-var htmlTemplate =  `<html>
+var htmlTemplate =  `
+
+<html>
 <head>
     <title>
         ${title}
@@ -90,7 +115,8 @@ app.get('/ui/madi.png', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var port = 8080; // Use 8080 for local development because you might already have apache running on 80
+var port = 8080; 
+
 app.listen(8080, function () {
-console.log('IMAD course app listening on port ${port}!');
+  console.log(`IMAD course app listening on port ${port}!`);
 });
