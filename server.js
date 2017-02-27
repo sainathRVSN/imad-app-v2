@@ -11,14 +11,13 @@ var articles={
     date:'26 mar 2017',
     content:`<p>create a project create a project create a project create a project create a projectcreate a projectcreate a projectcreate a projectcreate a projectcreate a project create a projectcreate a project create a project create a project</p>`
 },
-  'article-two':{
+ 'article-two':{
     title:'second article sainath',
     heading:'article two',
     date:'26 mar 2017',
     content:`<p>create a project create a project create a project create a project create a projectcreate a projectcreate a projectcreate a projectcreate a projectcreate a project create a projectcreate a project create a project create a project</p>`
 },
-
-'article-three':{
+ 'article-three':{
     title:'third article sainath',
     heading:'article three',
     date:'26 mar 2017',
@@ -44,11 +43,13 @@ function createtemplate(data)
         <div class="container">
         <div>
         <a href='/'>home</a>
+         </div>
         <hr>
-        <h3>${heading}</h3>
+       <h3>${heading}</h3>
         <div>
         ${date}
         </div>
+        <div>
         ${content}
         </div>
         </div>
@@ -56,7 +57,7 @@ function createtemplate(data)
 </html>
 `;
 
-return(htmltemplate);
+return htmltemplate;
 }
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
