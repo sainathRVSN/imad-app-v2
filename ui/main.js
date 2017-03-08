@@ -16,7 +16,7 @@ button.onclick=function(){
     //Make a request to the server and send the name
     
     //capture the name and render it to a list
-    var names=['name1','name2','name3','name4'];
+    var names=request.responseText;
     var list='';
     for(var i=0;i < names.length;i++)
     {
