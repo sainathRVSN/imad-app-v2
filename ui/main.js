@@ -10,13 +10,15 @@ button.onclick=function(){
           if(request.status  ===  200){
           //submit name
     var nameInput=document.getElementById('name');
-    var name=nameInput.value;
-    var submit=document.getElementById('submit_btn');
+   
   submit.onclick=function(){
     //Make a request to the server and send the name
     
     //capture the name and render it to a list
+    var name=nameInput.value;
+    var submit=document.getElementById('submit_btn');
     var names=request.responseText;
+    names=JSON.parse(names);
     var list='';
     for(var i=0;i < names.length;i++)
     {
