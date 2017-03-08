@@ -15,6 +15,6 @@ button.onclick=function(){
       }
   };
   //Make a request
-  request.open('GET','http://sainadhrvsn.imad.hasura-app.io/counter',true);
+  request.open('GET','http://sainathrvsn.imad.hasura-app.io/counter',true);
   request.send(null);
 };
