@@ -29,12 +29,7 @@ submit.onclick=function(){
       if(request.readyState ===  XMLHttpRequest.DONE){
           //take some action
           if(request.status  ===  200){
-          var counter=request.responseText;
-          var span=document.getElementById('count');
-          span.innerHTML=counter.toString();
-      }
-      }
-    var names=request.responseText;
+          var names=request.responseText;
     names=JSON.parse(names);
     var list='';
     for(var i=0;i < names.length;i++)
@@ -43,6 +38,9 @@ submit.onclick=function(){
     }
     var ul=document.getElementById('namelist');
     ul.innerHTML=list;
+    
+      }
+      }
     
     
 };
